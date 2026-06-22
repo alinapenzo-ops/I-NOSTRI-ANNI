@@ -38,7 +38,7 @@
       font-family: "Cormorant Garamond", serif;
       font-size: 3.8rem;
       font-weight: 500;
-      letter-spacing: 0.25rem; /* SPAZIATURA ELEGANTE */
+      letter-spacing: 0.25rem;
       margin-bottom: 35px;
       color: #a05c85;
       text-transform: uppercase;
@@ -51,16 +51,16 @@
       color: #4a2f42;
     }
 
-    /* Petali */
-    .petal {
+    /* Cuori dorati eleganti */
+    .heart {
       position: fixed;
       top: -10px;
-      color: #e7b4c4;
+      color: #d8b98b; /* oro tenue */
       font-size: 22px;
       animation: fall linear infinite;
-      opacity: 0.85;
+      opacity: 0.75;
       transform: rotate(15deg);
-      filter: blur(0.3px);
+      filter: drop-shadow(0 0 4px #e8d7b9);
     }
 
     @keyframes fall {
@@ -77,6 +77,75 @@
 
 <body>
 
-  <!-- Petali -->
+  <!-- Cuori dorati -->
   <script>
-    const
+    const hearts = 28;
+    const symbol = "♡"; // cuore elegante vuoto
+    for (let i = 0; i < hearts; i++) {
+      let h = document.createElement("div");
+      h.classList.add("heart");
+      h.innerHTML = symbol;
+      h.style.left = Math.random() * 100 + "vw";
+      h.style.animationDuration = 5 + Math.random() * 7 + "s";
+      h.style.fontSize = 18 + Math.random() * 22 + "px";
+      document.body.appendChild(h);
+    }
+  </script>
+
+  <div class="container">
+    <h1>I NOSTRI ANNI</h1>
+
+    <p>
+Stessa suora, stessa torta all'acquetta
+Stessa Filo che vien dentro ci serve e poi va
+Non lo so, che faccio qui
+Studio un po
+e vedo le formule brute che mi Guardano e 
+Sembrano chiedermi andiamo all'esame noi?
+
+Gli anni d'oro del grande Re Stefan
+Gli anni della Ludo e di Giulia
+Gli anni della Tiny e delle sue manie
+Gli anni in cucinino sempre in più di due
+Gli anni di che belle le tisanin
+Gli anni di Michele e dei suoi Sorrisi
+Gli anni del qualsiasi cosa fai
+Gli anni del "tranquilla, siam qui noi" siamo qui noi
+
+Stessa gente, ma la storia cambierà
+Con la laurea siamo ognuna in un' altra città
+Pandemia! ma senti un po
+Sai che c’è 
+Un po di Pic-tio-nary dai mi va 
+Ed è cosi che le pupe ritornano a volar!
+
+Gli anni immensi che han portato qui,
+Gli anni di quei sogni detti lì. 
+Gli anni delle notti a confidarsi,
+Gli anni del coraggio di cercarsi.
+Gli anni in cui la vita ti dirà
+Che l’amore vero ci sarà.
+Gli anni del “qualsiasi cosa avrai”, 
+Gli anni del “tranquilla, siam qui noi”. 
+Siamo qui noi.
+
+Stessa storia, stessi viaggi fatti poi.
+A Bologna e quelle statue che dicevi “oi”.
+Pordenone, anni 90 
+Poi a Lignano, 
+Con la tempesta, quel ramo e poi 
+Pian piano vedi che l’alba arriva anche per noi.
+
+Gli anni nuovi iniziano da te,
+Gli anni che oggi vivi insieme a Ste.
+Gli anni con un brindisi così,
+Gli anni a festeggiare il vostro sì.
+Gli anni di ogni strada che verrà,
+Gli anni di ogni bella novità.
+Gli anni di un ricordo da trofeo:
+“Dietro liceo… davanti museo!”
+    </p>
+  </div>
+
+</body>
+</html>
