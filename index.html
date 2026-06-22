@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>I Nostri Anni</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Georgia", serif;
+      background: #f8e9ef;
+      color: #5a3b4e;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 750px;
+      background: #ffffffd9;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.08);
+      backdrop-filter: blur(5px);
+      animation: fadeIn 1.2s ease;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+      color: #a05c85;
+      letter-spacing: 1px;
+    }
+
+    p {
+      white-space: pre-line;
+      line-height: 1.6;
+      font-size: 1.15rem;
+    }
+
+    /* Cuori che cadono */
+    .heart {
+      position: fixed;
+      top: -10px;
+      color: #e38aae;
+      font-size: 20px;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10vh) translateX(0); }
+      100% { transform: translateY(110vh) translateX(20px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Cuori generati -->
+  <script>
+    const hearts = 25; 
+    for (let i = 0; i < hearts; i++) {
+      let heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 4 + Math.random() * 6 + "s";
+      heart.style.fontSize = 15 + Math.random() * 20 + "px";
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <div class="container">
+    <h1>NOSTRI ANNI</h1>
+
+    <p>
+Stessa suora, stessa torta all'acquetta
+Stessa Filo che vien dentro ci serve e poi va
+Non lo so, che faccio qui
+Studio un po
+e vedo le formule brute che mi Guardano e 
+Sembrano chiedermi andiamo all'esame noi?
+
+Gli anni d'oro del grande Re Stefan
+Gli anni della Ludo e di Giulia
+Gli anni della Tiny e delle sue manie
+Gli anni in cucinino sempre in più di due
+Gli anni di che belle le tisanin
+Gli anni di Michele e dei suoi Sorrisi
+Gli anni del qualsiasi cosa fai
+Gli anni del "tranquilla, siam qui noi" siamo qui noi
+
+Stessa gente, ma la storia cambierà
+Con la laurea siamo ognuna in un' altra città
+Pandemia! ma senti un po
+Sai che c’è 
+Un po di Pic-tio-nary dai mi va 
+Ed è cosi che le pupe ritornano a volar!
+
+Gli anni immensi che han portato qui,
+Gli anni di quei sogni detti lì. 
+Gli anni delle notti a confidarsi,
+Gli anni del coraggio di cercarsi.
+Gli anni in cui la vita ti dirà
+Che l’amore vero ci sarà.
+Gli anni del “qualsiasi cosa avrai”, 
+Gli anni del “tranquilla, siam qui noi”. 
+Siamo qui noi.
+
+Stessa storia, stessi viaggi fatti poi.
+A Bologna e quelle statue che dicevi “oi”.
+Pordenone, anni 90 
+Poi a Lignano, 
+Con la tempesta, quel ramo e poi 
+Pian piano vedi che l’alba arriva anche per noi.
+
+Gli anni nuovi iniziano da te,
+Gli anni che oggi vivi insieme a Ste.
+Gli anni con un brindisi così,
+Gli anni a festeggiare il vostro sì.
+Gli anni di ogni strada che verrà,
+Gli anni di ogni bella novità.
+Gli anni di un ricordo da trofeo:
+“Dietro liceo… davanti museo!”
+    </p>
+  </div>
+
+</body>
+</html>
